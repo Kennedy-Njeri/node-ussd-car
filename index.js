@@ -1,8 +1,8 @@
-var express = require('express')
-var app = express()
-var morgan = require('morgan');
-var bodyParser = require('body-parser');
-var cors = require('cors');
+const express = require('express')
+const app = express()
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const Registration = require('./models/carRegistration')
 require('./db/mongoose')
 
@@ -20,7 +20,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var port = process.env.PORT
+const port = process.env.PORT
 
 
 
@@ -33,10 +33,10 @@ app.post('/ussd',  async (req, res) => {
     let message = '';
 
 
-    let sessionId   = req.body.sessionId;
-    let serviceCode = req.body.serviceCode;
-    let phoneNumber = req.body.phoneNumber;
-    let text     = req.body.text
+    const sessionId   = req.body.sessionId;
+    const serviceCode = req.body.serviceCode;
+    const phoneNumber = req.body.phoneNumber;
+    const text     = req.body.text
 
     console.log(sessionId, serviceCode, phoneNumber, text)
 
@@ -66,6 +66,7 @@ app.post('/ussd',  async (req, res) => {
     else if (length === 2 && txt[0] === '1'){
 
         message = 'CON Enter year of manufacture\n';
+        console.log(length, txt[0], txt)
         res.send(message, 200);
 
     }
