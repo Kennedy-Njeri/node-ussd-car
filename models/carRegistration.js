@@ -39,6 +39,14 @@ const Registration = mongoose.Schema(
             required: true
 
         },
+        phone_number: {
+            type: Number,
+            required: true
+        },
+        done: {
+            type: Boolean,
+            default: false
+        }
     }
 )
 
