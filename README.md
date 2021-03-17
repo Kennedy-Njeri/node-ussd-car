@@ -37,16 +37,17 @@
 
 **Start**
 
-![](https://github.com/Kennedy-Njeri/node-ussd-car/blob/master/screens/start.png)\
+![](https://github.com/Kennedy-Njeri/node-ussd-car/blob/master/screens/start.png)
 
 
 **Front Menu**
 
-![](https://github.com/Kennedy-Njeri/node-ussd-car/blob/master/screens/start.png)
+![](https://github.com/Kennedy-Njeri/node-ussd-car/blob/master/screens/frontmenu.png)
 
 
 **Add Registration**
 ![](https://github.com/Kennedy-Njeri/node-ussd-car/blob/master/screens/add%20reg.png)
+
 
 **Check Car status**
 ![](https://github.com/Kennedy-Njeri/node-ussd-car/blob/master/screens/status.png)
