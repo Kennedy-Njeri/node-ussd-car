@@ -49,11 +49,23 @@ app.post('/ussd',  async (req, res) => {
 
 
     if (text === '') {
-        message = 'CON Welcome to Latex Garage Ltd \n';
-        message += '1: Enter for new car reg device \n';
-        message += '2: Check status of car\n';
-        message += '3: Exit\n';
-        res.send(message, 200);
+
+        await Registration.findOne({
+            phone_number: phoneNumber
+        }).then((registrant) => {
+            if (registrant) {
+                message = 'CON Welcome to Latex Garage Ltd  You have already submitted data your information to us.\n';
+                message += '2: Check status of car\n';
+                message += '3: Exit\n';
+                res.send(message, 200);
+            } else {
+                message = 'CON Welcome to Latex Garage Ltd \n';
+                message += '1: Enter for new car reg device \n';
+                message += '2: Check status of car\n';
+                message += '3: Exit\n';
+                res.send(message, 200);
+            }
+        })
 
     }
     else if (text === '1') {
