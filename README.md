@@ -46,10 +46,12 @@
 
 
 **Add Registration**
+
 ![](https://github.com/Kennedy-Njeri/node-ussd-car/blob/master/screens/add%20reg.png)
 
 
 **Check Car status**
+
 ![](https://github.com/Kennedy-Njeri/node-ussd-car/blob/master/screens/status.png)
 
 
